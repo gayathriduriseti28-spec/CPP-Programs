@@ -1,0 +1,33 @@
+/CLASS AS A MEMBER FUNCTION
+#include<iostream>
+using namespace std;
+class A
+{
+	public:
+		int x;
+	A()
+	{
+		x=20;
+		cout<<"\n In A constructor";
+	}
+};
+class B
+{
+	public:
+		int y;
+		A a;
+		B()
+		{
+			cout<<"\n In B constructor";
+		}
+	
+void show()
+{
+	cout<<"\nX="<<a.x<<"\tY="<<y;
+}
+};
+int main(){
+	B b;
+	b.show();
+	return 0;
+}
